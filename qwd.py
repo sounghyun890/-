@@ -3,9 +3,6 @@ import discord os
 
 client = discord.Client()
 
-# 복사해 둔 토큰을 your_token에 넣어줍니당
-token = "ODQ4Nzk1MzgzNzUxNjM5MDgw.YLR0TQ.w1fYHkZpUBGkRR5ADkX0qedCZ_0"
-
 # 봇이 구동되었을 때 동작되는 코드
 @client.event
 async def on_ready():
