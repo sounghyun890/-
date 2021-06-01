@@ -3,6 +3,7 @@ import discord os
 
 client = discord.Client()
 
+token = "ODQ4Nzk1MzgzNzUxNjM5MDgw.YLR0TQ.yuYOAgt90ZAkn-LBbG7giKNVRqQ"
 # 봇이 구동되었을 때 동작되는 코드
 @client.event
 async def on_ready():
