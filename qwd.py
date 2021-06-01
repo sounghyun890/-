@@ -102,6 +102,6 @@ async def on_message(message):
         await message.delete()
     await bot.process_commands(messsage)
 
-client.run(os.enniron("token"))
+client.run(ccess_token)
 access_token = os.environ["token"]
 
