@@ -1,1 +1,1 @@
-worker: python qwd.py
+worker: python bot.py
