@@ -1,1 +1,1 @@
-disocrd.py==1.
+disocrd.py==1.6
