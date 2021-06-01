@@ -3,8 +3,7 @@ import discord os
 
 client = discord.Client()
 
-token = "ODQ4Nzk1MzgzNzUxNjM5MDgw.YLR0TQ.yuYOAgt90ZAkn-LBbG7giKNVRqQ"
-# 봇이 구동되었을 때 동작되는 코드
+
 @client.event
 async def on_ready():
     print("로그인 된 봇:") #화면에 봇의 아이디, 닉네임이 출력되는 코드
@@ -103,6 +102,6 @@ async def on_message(message):
         await message.delete()
     await bot.process_commands(messsage)
 
-client.run(ccess_token)
+client.run(access_token)
 access_token = os.environ["token"]
 
