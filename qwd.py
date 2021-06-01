@@ -1,5 +1,5 @@
 import asyncio
-import discord
+import discord os
 
 client = discord.Client()
 
@@ -105,6 +105,6 @@ async def on_message(message):
         await message.delete()
     await bot.process_commands(messsage)
 
-    
-client.run(token)
+client.run(access_token)
+access_token = os.environ["token"]
 
