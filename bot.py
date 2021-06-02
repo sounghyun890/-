@@ -61,10 +61,6 @@ async def on_message(message):
     id = message.author.id
     channel = message.channel
 
-    if message.content.startswith('안녕'):
-        channel = message.channel
-        await channel.send('안녕하세요 저희채널에 오신걸 환영합니다')
-
     if message.content == "!도움":
         embed = discord.Embed(title = "TNS 봇의 도움말", description = '''
         욕 검열 봇입니다
