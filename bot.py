@@ -4,6 +4,19 @@ import discord,os
 client = discord.Client()
 
 
+import datetime
+
+now = datetime.datetime.now()
+time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
+
+@client.event
+async def on_message_delete(message):
+    channel = client.get_channel(848882109745070110)
+    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
+    embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
+    embed.set_footer(text=f"{message.guild.name} | {time}")
+    await channel.send(embed=embed)
+    
 @client.event
 async def on_ready():
     print("로그인 된 봇:") #화면에 봇의 아이디, 닉네임이 출력되는 코드
