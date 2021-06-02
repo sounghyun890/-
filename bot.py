@@ -17,6 +17,17 @@ async def on_message_delete(message):
     embed.set_footer(text=f"{message.guild.name} | {time}")
     await channel.send(embed=embed)
     
+    
+@client.event
+async def on_message_edit(before, after):
+    channel = client.get_channel(로그를 남길 채널의 ID)
+    embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
+    embed.add_field(name="수정 전 내용", value=before.content, inline=True)
+    embed.add_field(name="수정 후 내용", value=after.content, inline=True)
+    embed.set_footer(text=f"{before.guild.name} | {time}")
+    await channel.send(embed=embed)
+    
+    
 @client.event
 async def on_ready():
     print("로그인 된 봇:") #화면에 봇의 아이디, 닉네임이 출력되는 코드
