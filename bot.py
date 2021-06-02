@@ -109,8 +109,10 @@ async def on_message(message):
     
     
     if bad >= -45 :
-        await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
+        a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await message.delete()
+        await asyncio.sleep(3)
+        await a.delete()
     await bot.process_commands(messsage)
 
 access_token = os.environ["token"]
