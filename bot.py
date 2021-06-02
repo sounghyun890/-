@@ -18,10 +18,10 @@ async def on_ready():
     game = discord.Game("시작하는 중...")
     await client.change_presence(status=discord.Status.online, activity=game)
     while True:
-        game = discord.Game("TNS(TANAT STUDIO) 베타 테스트")
+        game = discord.Game("TNS(TANAT STUDIO)")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)
-        game = discord.Game("신천고 검열봇")
+        game = discord.Game("욕 찾기")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)
         game = discord.Game("!도움 듣는 중")
