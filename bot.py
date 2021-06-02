@@ -1,34 +1,8 @@
 import asyncio
 import discord,os
-
-client = discord.Client()
-
-
 import datetime
 
-now = datetime.datetime.now()
-time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
-
-@client.event
-async def on_message_delete(message):
-    if message.author.bot:
-----return
-    channel = client.get_channel(848882109745070110)
-    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
-    embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
-    embed.set_footer(text=f"{message.guild.name} | {time}")
-    await channel.send(embed=embed)
-    
-@client.event    
-async def on_message_edit(before, after):
-    if message.author.bot:
-----return
-    channel = client.get_channel(848882109745070110)
-    embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
-    embed.add_field(name="수정 전 내용", value=before.content, inline=True)
-    embed.add_field(name="수정 후 내용", value=after.content, inline=True)
-    embed.set_footer(text=f"{before.guild.name} | {time}")
-    await channel.send(embed=embed)
+client = discord.Client()
     
     
 @client.event
@@ -56,7 +30,29 @@ async def on_ready():
 # 디스코드에는 현재 본인이 어떤 게임을 플레이하는지 보여주는 기능이 있습니다.
 # 이 기능을 사용하여 봇의 상태를 간단하게 출력해줄 수 있습니다.
         
+now = datetime.datetime.now()
+time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
 
+@client.event
+async def on_message_delete(message):
+    if message.author.bot:
+----return
+    channel = client.get_channel(848882109745070110)
+    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
+    embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
+    embed.set_footer(text=f"{message.guild.name} | {time}")
+    await channel.send(embed=embed)
+    
+@client.event    
+async def on_message_edit(before, after):
+    if message.author.bot:
+----return
+    channel = client.get_channel(848882109745070110)
+    embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
+    embed.add_field(name="수정 전 내용", value=before.content, inline=True)
+    embed.add_field(name="수정 후 내용", value=after.content, inline=True)
+    embed.set_footer(text=f"{before.guild.name} | {time}")
+    await channel.send(embed=embed)
 
 # 봇이 새로운 메시지를 수신했을때 동작되는 코드입니다.
 @client.event
