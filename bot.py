@@ -36,7 +36,7 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 @client.event
 async def on_message_delete(message):
     if message.author.bot:return
-    channel = client.get_channel(848882109745070110)
+    channel = client.get_channel(849536197273059338)
     embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 채널 : {message.channel.mention}", color=0xFF0000)
     embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
     embed.set_footer(text=f"{message.guild.name} | {time}")
@@ -45,7 +45,7 @@ async def on_message_delete(message):
 @client.event    
 async def on_message_edit(before, after):
     if message.author.bot:return
-    channel = client.get_channel(848882109745070110)
+    channel = client.get_channel(849536197273059338)
     embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
     embed.add_field(name="수정 전 내용", value=before.content, inline=True)
     embed.add_field(name="수정 후 내용", value=after.content, inline=True)
