@@ -124,7 +124,7 @@ async def on_message(message):
     bad = bad + message_content.find("빠큐")
     bad = bad + message_content.find("시놈발")
     bad = bad + message_content.find("시이발")
-    bad = bad + message_content.find("ㅅ")
+    bad = bad + message_content.find("ㅅ")#47
     
     if bad >= -47 :
    
