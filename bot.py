@@ -124,7 +124,7 @@ async def on_message(message):
     bad = bad + message_content.find("빠큐")
     bad = bad + message_content.find("시놈발")
     bad = bad + message_content.find("시이발")
-    ad = bad + message_content.find("ㅅ")
+    bad = bad + message_content.find("ㅅ")
     
     if bad >= -47 :
         a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
