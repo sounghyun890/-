@@ -35,12 +35,10 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 
 @client.event
 async def on_message_delete(message):
-    if message.author.bot:return
+     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
-    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention}", color=0xFF0000)
-    embed.add_field(서버 : {message.guild.name}")
-    embed.add_field(채널 : {message.channel.mention}")
-    embed.add_field(value=f"내용 : {message.content}", inline=False)
+    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.mention} 서버 : {message.guild.name} 채널 : {message.channel.mention}", color=0xFF0000)
+    embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
     embed.set_footer(text=f"TNS 봇 | {time}")
     await channel.send(embed=embed)
     
