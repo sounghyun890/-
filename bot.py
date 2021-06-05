@@ -62,7 +62,8 @@ async def on_message(message):
         embed = discord.Embed(title = "TNS 봇의 도움말", description = '''
         욕 검열 봇입니다
 욕 추가 및 수정을 원하시면 타나트TANAT#2601
-을 추가해주세요''', color = 0x8258FA)
+을 추가해주세요
+봇 로그 보러가기 https://discord.gg/hFryJ4zYyw''', color = 0x8258FA)
         await message.author.send(embed = embed)
         await message.delete()
     if message.author.bot:
