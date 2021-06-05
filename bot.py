@@ -63,7 +63,7 @@ async def on_message(message):
         욕 검열 봇입니다
 욕 추가 및 수정을 원하시면 타나트TANAT#2601
 을 추가해주세요
-봇 로그 보러가기 https://discord.gg/hFryJ4zYyw''', color = 0x8258FA)
+봇 로그 보러가기 https://discord.gg/hFryJ4zYyw''', color = 0x08FFFA)
         await message.author.send(embed = embed)
         await message.delete()
     if message.author.bot:
