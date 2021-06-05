@@ -46,7 +46,7 @@ async def on_message_delete(message):
 async def on_message_edit(before, after):
     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
-    embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
+    embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.name} 채널 : {before.channel.mention}", color=0xFF9900)
     embed.add_field(name="수정 전 내용", value=before.content, inline=True)
     embed.add_field(name="수정 후 내용", value=after.content, inline=True)
     embed.set_footer(text=f"{before.guild.name} | {time}")
@@ -127,14 +127,19 @@ async def on_message(message):
     bad = bad + message_content.find("ㅅ ㅂ")#47
     bad = bad + message_content.find("미친")
     bad = bad + message_content.find("ㄷㅊ")
-    bad = bad + message_content.find("ㄷ ")#51
+    bad = bad + message_content.find("ㄷ ㅊ")#51
     bad = bad + message_content.find("자지")
     bad = bad - message_content.find("자지마")#50
     bad = bad + message_content.find("폐륜")
+    bad = bad + message_content.find("불알")
+    bad = bad + message_content.find("ㅈ같")
+    bad = bad + message_content.find("ㅈ랄")
     bad = bad + message_content.find("기모찌")
+    bad = bad + message_content.find("자위")
+    bad = bad + message_content.find("딸딸이")
     
     
-    if bad >= -52 :
+    if bad >= -57 :
    
         a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await message.delete()
