@@ -18,9 +18,6 @@ async def on_ready():
     game = discord.Game("시작하는 중...")
     await client.change_presence(status=discord.Status.online, activity=game)
     while True:
-        game = discord.Game("TNS(TANAT STUDIO)")
-        await client.change_presence(status=discord.Status.online, activity=game)
-        await asyncio.sleep(2)
         game = discord.Game("욕 찾기")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)
@@ -31,7 +28,7 @@ async def on_ready():
 # 이 기능을 사용하여 봇의 상태를 간단하게 출력해줄 수 있습니다.
         
 now = datetime.datetime.now()
-time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분 {str(now.second)}초"
+time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분"
 
 @client.event
 async def on_message_delete(message):
