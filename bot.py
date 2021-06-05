@@ -34,7 +34,7 @@ time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)
 async def on_message_delete(message):
     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
-    embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.username} ({message.author}) \n서버 : {message.guild.name} \n채널 : {message.channel.mention}", color=0xFF0000)
+    embed = discord.Embed(title=f"삭제됨", description=f"유저 : ({message.author}) \n서버 : {message.guild.name} \n채널 : {message.channel.mention}", color=0xFF0000)
     embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
     embed.set_footer(text=f"TNS 봇 | {time}")
     await channel.send(embed=embed)
@@ -135,9 +135,15 @@ async def on_message(message):
     bad = bad + message_content.find("기모찌")
     bad = bad + message_content.find("자위")
     bad = bad + message_content.find("딸딸이")
+    bad = bad + message_content.find("TLQKF")
+    bad = bad + message_content.find("SEX")
+    bad = bad + message_content.find("Sex")
+    bad = bad + message_content.find("섹슥")
+    bad = bad + message_content.find("미친놈")
+            
     
     
-    if bad >= -57 :
+    if bad >= -62 :
    
         a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await message.delete()
