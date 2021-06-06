@@ -31,8 +31,8 @@ now = datetime.datetime.now()
 time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분"
 
 @client.event
-await <discord.Guild>.get_member
 async def on_message_delete(message):
+    await <discord.Guild>.get_member
     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
     embed = discord.Embed(title=f"삭제됨", description=f"유저 : {<discord.Member>.nick} ({message.author}) \n서버 : {message.guild.name} \n채널 : {message.channel.mention}", color=0xFF0000)
