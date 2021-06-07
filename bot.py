@@ -148,12 +148,16 @@ async def on_message(message):
     
     
     if bad >= -62 :
-   
-        a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await message.delete()
+        a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await asyncio.sleep(7)
         await a.delete()
     await bot.process_commands(messsage)
 
 access_token = os.environ["token"]
 client.run(access_token)
+
+@client.event
+async def on_message(message):
+    if message.content == "한태은":
+    await message.channel.send("영어 8점")
