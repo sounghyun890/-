@@ -160,4 +160,4 @@ client.run(access_token)
 @client.event
 async def on_message(message):
     if message.content == "한태은":
-    await message.channel.send("영어 8점")
+        await message.channel.send("영어 8점")
