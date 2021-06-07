@@ -18,7 +18,7 @@ async def on_ready():
     game = discord.Game("시작하는 중...")
     await client.change_presence(status=discord.Status.online, activity=game)
     while True:
-        game = discord.Game("욕 찾기")
+        game = discord.Game("욕 찾기")#상태 메세지
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)
         game = discord.Game("!도움 듣는 중")
@@ -31,7 +31,7 @@ now = datetime.datetime.now()
 time = f"{str(now.year)}년 {str(now.month)}월 {str(now.day)}일 {str(now.hour)}시 {str(now.minute)}분"
 
 @client.event
-async def on_message_delete(message):
+async def on_message_delete(message):#메세지가 삭제 되면
     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
     embed = discord.Embed(title=f"삭제됨", description=f"유저 : {message.author.display_name}({message.author}) \n서버 : {message.guild.name} \n채널 : {message.channel.mention}", color=0xFF0000)
@@ -40,7 +40,7 @@ async def on_message_delete(message):
     await channel.send(embed=embed)
     
 @client.event    
-async def on_message_edit(before, after):
+async def on_message_edit(before, after):#메세지 수정 되면(작동 안함)
     if message.author.bot:return
     channel = client.get_channel(849536197273059338)
     embed = discord.Embed(title=f"수정됨", description=f"유저 : {before.author.mention} 채널 : {before.channel.mention}", color=0xFF9900)
