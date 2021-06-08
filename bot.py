@@ -38,7 +38,25 @@ async def on_message_delete(message):#메세지가 삭제 되면
     embed.add_field(name="삭제된 내용", value=f"내용 : {message.content}", inline=False)
     embed.set_footer(text=f"TNS 봇 | {time}")
     await channel.send(embed=embed)
-    
+
+@client.event
+    if message.content.startswith('주사위'):
+
+        randomNum = random.randrange(1, 7) # 1~6까지 랜덤수
+        print(randomNum)
+        if randomNum == 1:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: '+ ':one:'))
+        if randomNum == 2:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: ' + ':two:'))
+        if randomNum ==3:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: ' + ':three:'))
+        if randomNum ==4:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: ' + ':four:'))
+        if randomNum ==5:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: ' + ':five:'))
+        if randomNum ==6:
+            await client.send_message(message.channel, embed=discord.Embed(description=':game_die: ' + ':six: '))
+
 @client.event    
 async def on_message_edit(before, after):#메세지 수정 되면(작동 안함)
     if message.author.bot:return
