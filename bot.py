@@ -18,10 +18,10 @@ async def on_ready():
     game = discord.Game("시작하는 중...")
     await client.change_presence(status=discord.Status.online, activity=game)
     while True:
-        game = discord.Game("욕 찾기")#상태 메세지
+        game = discord.Game("!도움 찾기")#상태 메세지
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)
-        game = discord.Game("!도움 듣는 중")
+        game = discord.Game("!도움 듣기")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(2)        
 # 디스코드에는 현재 본인이 어떤 게임을 플레이하는지 보여주는 기능이 있습니다.
