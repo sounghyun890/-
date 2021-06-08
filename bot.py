@@ -154,7 +154,7 @@ async def on_message(message):
     bad = bad + message_content.find("씹발")
     bad = bad + message_content.find("느그어미")
     bad = bad + message_content.find("포르노")
-    bad = bad - message_content.find("자지말")
+    bad = bad - message_content.find("자지말")#68
 
             
     
