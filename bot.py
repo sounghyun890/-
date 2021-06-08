@@ -40,6 +40,7 @@ async def on_message_delete(message):#메세지가 삭제 되면
     await channel.send(embed=embed)
 
 @client.event
+async def on_message(message) :
     if message.content.startswith('주사위'):
 
         randomNum = random.randrange(1, 7) # 1~6까지 랜덤수
