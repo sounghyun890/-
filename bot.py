@@ -64,9 +64,7 @@ async def on_message(message):
         욕 검열 봇입니다
 욕 추가 및 수정을 원하시면 로그 서버의 버그 리포트 채팅방을 이용해주세요
 
-봇 로그 보러가기 https://discord.gg/hFryJ4zYyw
-
-하트 누르러 가기 https://koreanbots.dev/bots/848795383751639080''', color = 0x08FFFA)
+봇 로그 보러가기 https://discord.gg/hFryJ4zYyw''', color = 0x08FFFA)
         await message.author.send(embed = embed)
         await message.delete()
     if message.author.bot:
