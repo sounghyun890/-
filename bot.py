@@ -62,7 +62,7 @@ async def on_message(message):
     if message.content == "!도움":
         embed = discord.Embed(title = "TNS 봇의 도움말", description = '''
         욕 검열 봇입니다
-욕 추가 및 수정을 원하시면 로그 서버의 버그 리포트 채팅방을 이용해주세요
+욕 추가 및 수정을 원하시면 로그 서버의 문의 채팅방을 이용해주세요
 
 봇 로그 보러가기 https://discord.gg/hFryJ4zYyw''', color = 0x08FFFA)
         await message.author.send(embed = embed)
