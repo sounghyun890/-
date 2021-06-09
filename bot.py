@@ -160,6 +160,7 @@ async def on_message(message):
     bad = bad + message_content.find("존나")
     bad = bad + message_content.find("ファック")
     bad = bad + message_content.find("他妈的")
+    bad = bad + message_content.find("ㅣ발")
     
 
     
