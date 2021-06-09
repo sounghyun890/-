@@ -153,11 +153,15 @@ async def on_message(message):
     bad = bad + message_content.find("느그어미")
     bad = bad + message_content.find("포르노")
     bad = bad - message_content.find("자지말")#68
+    bad = bad + message_content.find("씌발")
+    bad = bad + message_content.find("씹창")
+    bad = bad + message_content.find("시이이벌")
+    bad = bad + message_content.find("뒤져")
+    bad = bad + message_content.find("존나")
 
-            
     
     
-    if bad >= -68 :
+    if bad >= -73 :
         a = await message.channel.send(message.author.mention+"님의 메세지가 삭제 되었습니다.\n[사유:부적절한 언어 포함]")
         await message.delete() 
         await asyncio.sleep(7)
